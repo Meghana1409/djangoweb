@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Order{% endblock title %}
+
+{% block body %}
+{% block head %}
+{% comment %} <style>
+img{
+    height:500px;
+    width:100px; 
+}
+</style> {% endcomment %}
+{% endblock head %}
+<div class="container-fluid my-4 px-0 py-4">
+    
+    </div>
+    <div class="container mb-4">
+    <h1 class="text-center">Order Now!!!</h1>
+    <form class="py-2" method="POST" action="">
+    {% csrf_token %}
+        <div class="form-group">
+          <label for="mail">Email address</label>
+          <input type="email" class="form-control" id="mail" name="mailname" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name" name="name" placeholder="Name">
+          </div>
+        
+        <div class="form-group">
+          <label for="desc">Tell me what do you want to contact me for...</label>
+          <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+      </form>
+</div>
+{% endblock body %}
